@@ -1,5 +1,5 @@
 package com.jvtrodrigues.minhasfinancas.model.enuns;
 
 public enum TipoLancamento {
-	RECEITA, DEPESAS;
+	RECEITA, DESPESA;
 }

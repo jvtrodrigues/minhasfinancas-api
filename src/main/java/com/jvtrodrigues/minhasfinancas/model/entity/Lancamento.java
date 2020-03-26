@@ -2,8 +2,12 @@ package com.jvtrodrigues.minhasfinancas.model.entity;
 
 import com.jvtrodrigues.minhasfinancas.model.enuns.StatusLancamento;
 import com.jvtrodrigues.minhasfinancas.model.enuns.TipoLancamento;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import javax.persistence.*;
@@ -14,10 +18,12 @@ import java.time.LocalDate;
 @Table(name = "lancamento", schema = "financas")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 	
 	@Id
-	@Column(name = "name")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
